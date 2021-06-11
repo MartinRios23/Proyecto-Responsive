@@ -1,0 +1,111 @@
+/*Fonts*/
+@font-face{
+    font-family: "TrebuchetMS";
+    src: url('../Fonts/TrebuchetMS.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "BebasNeue";
+    src: url('../Fonts/BebasNeue.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "WebSymbolsRegular";
+    src: url('../Fonts/websymbols-regular-webfont.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*General Sytles*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-image: url("../Images/pattern.png");
+}
+
+
+.wrap{
+    margin: 0px auto;
+    width: 1200px;
+}
+
+.gear{
+    font-family: "WebSymbolsRegular";
+}
+
+/*Header*/
+#header{
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    font-family: "BebasNeue" , sans-serif;
+    color: white;
+}
+
+#logo{
+    float: left;
+    width: 200px;
+    background-color: #37bcf9;
+    text-align: center;
+    letter-spacing: 1px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s;
+    margin-top: 8px;
+    margin-left: 20px;
+}
+
+#logo .gear{
+    display: block;
+    float: left;
+    font-size: 30px;
+    margin-top: 8px;
+    margin-left: 20px;
+}
+
+#logo h3{
+    font-size: 40px;
+    display: block;
+    float: right;
+    font-size: 40px;
+    margin-top: 5px;
+    transition: all 0.3s;
+    margin-right: 65px;
+}
+
+/*Navbar*/
+#menu{
+    float: right;
+    margin-right: 2%;
+    height: 70px;
+    background-color: black;
+}
+
+#menu ul li{
+    font-size: 24px;
+    display: inline-block;
+    margin: 20px;
+}
+
+#menu ul li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 1px;
+    transition: all 0.2s;
+}
+
+#menu ul li a:hover{
+    color: #37bcf9;
+    text-shadow: 1px 0px 2px #37bcf9;
+    transform: scale(1.2,1.2);
+}
+
