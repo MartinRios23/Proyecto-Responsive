@@ -176,3 +176,10 @@ body{
     width: 100%;
     text-align: center;
 }
+
+.card:hover{
+    transition: all 0.3s;
+    background-color: #7ecbff;
+    transform: scale(1.1,1.1);
+    box-shadow: 1px 1px 5px #00538c;
+}
