@@ -73,7 +73,41 @@ body {
   font-size: 30px;
   margin-top: 8px;
   margin-left: 20px;
-  padding-bottom: 10px;
+  animation-name: rotate-gear;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotate-gear{
+  from{
+    transform: rotateZ(0deg);
+  }
+  to{
+    transform: rotateZ(360deg);
+  }
+}
+
+#logo:hover{
+  border-radius: 2px;
+  color: black;
+  background-color: #ccc;
+}
+
+#logo:hover .gear{
+  animation: fromBellow 500ms linear;
+}
+
+@keyframes fromBellow{
+  0%{
+    transform: translateY(0%);
+  }
+  50%{
+    transform: translateY(200%);
+  }
+  100%{
+    transform: translateY(0%);
+  }
 }
 
 #logo h3 {
@@ -85,6 +119,20 @@ body {
   transition: all 0.3s;
   margin-right: 48px;
 }
+
+#logo:hover h3{
+  animation: fromRight 300ms linear;
+}
+
+@keyframes fromRight{
+  from{
+    transform: translateX(200%);
+  }
+  to{
+    transform: translateX(0%);
+  }
+}
+
 
 /*NAVBAR*/
 #menu {
@@ -510,4 +558,8 @@ body {
 
 #footer #browsers img{
   width: 45px;
+}
+
+#footer #browsers img:hover{
+  transform: scale(1.2,1.2);
 }
