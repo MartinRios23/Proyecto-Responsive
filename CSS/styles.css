@@ -476,6 +476,28 @@ body {
     margin-bottom: 20px;
 }
 
+#social .overlay{
+  display: block;
+  height: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 0px 0px 1px #ccc;
+  position: absolute;
+  padding: 5px;
+  margin-left: 70px;
+  margin-top: -50px;
+  cursor: pointer;
+  transform: translateX(-80%);
+  opacity: 0;
+  transition: all .5s;
+}
+
+#social div:hover .overlay{
+  transform: translateX(0%);
+  opacity: 1;
+}
+
 /*ARTICLES*/
 
 #articles{
@@ -555,6 +577,7 @@ body {
     margin-top: 60px;
     line-height: 100px;
     text-align: center;
+    transition: all 1s;
 
 }
 
@@ -565,6 +588,30 @@ body {
     letter-spacing: 2px;
     text-decoration: none;
     color: #00538c;
+    transition: all 1s;
+}
+
+#blog:hover{
+  background-color: #333;
+  border: 10px solid #37bcf9;
+  border-radius: 180px;
+  box-shadow: 0px 0px 10px grey;
+  animation: blink 10s infinite linear;
+  transition: all 2s;
+
+}
+
+@keyframes blink {
+  0%{ border: 10px solid #37bcf9}
+  25%{ border: 10px solid green}
+  50%{ border: 10px solid yellow}
+  75%{ border: 10px solid red}
+  100%{ border: 10px solid #37bcf9}
+}
+
+#blog:hover a{
+  text-shadow: 1px 1px 1px black, 1px 2px 1px black, 1px 3px 1px black,1px 4px 1px black, 1px 5px 1px black, 1px 6px 1px black;
+  color: white;
 }
 
 /*FOOTER*/
@@ -617,12 +664,19 @@ body {
   margin-top: 10px;
   padding: 5px;
   border-bottom: 1px solid #ccc;
+  transition: all .3ms;
 }
 
 #footer ul li a{
   display: block;
   height: 40px;
+  
+}
 
+#footer ul li a:hover{
+  padding-left: 40px;
+  color: white;
+  width: 100%;
 }
 
 #footer #location iframe{
